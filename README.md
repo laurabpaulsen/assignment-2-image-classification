@@ -11,32 +11,12 @@ To produce the results for this assignment, run the following commands in the ro
 bash setup.sh
 ```
 
-2. Run the classification for the assignment
+2. Train and test the classifiers. This will produce a classification report for each
+classifier (logistic and mlp) in the `out` directory
 ```
 bash run.sh
 ```
 
-Alternatively, if you want to run the scripts manually, you can run the following commands in the root directory of the repository.
-1. Create and activate a virtual environment
-```
-bash setup.sh
-```
-
-2. Run the `image_classification.py` script with the desired arguments
-```
-python src/image_classification.py --clf <model>
-```
-
-### Arguments
-The following arguments can be passed to the `image_classification.py` script:
-- `--model`: The model to use for classification. For now `logistic` and `mlp` are supported.
-
-## Output
-A classification report is saved in the `out` directory. The report contains the following metrics:
-- Precision
-- Recall
-- F1-score
-- Support
 
 ## Repository overview
 ```
@@ -54,6 +34,12 @@ A classification report is saved in the `out` directory. The report contains the
 ```
 
 ## Results
+A classification report is saved in the `out` directory. The report contains the following metrics:
+- Precision
+- Recall
+- F1-score
+- Support
+
 A logistic reggression classifier and a neural network classifier were trained and tested on the Cifar10 dataset.
 
 The logistic regression classifier was trained specifying the following parameters:
