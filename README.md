@@ -11,12 +11,10 @@ To produce the results for this assignment, run the following commands in the ro
 bash setup.sh
 ```
 
-2. Train and test the classifiers. This will produce a classification report for each
-classifier (logistic and mlp) in the `out` directory
+2. Train and test the classifiers. This will produce a classification report for each classifier (logistic and mlp) in the `out` directory
 ```
 bash run.sh
 ```
-
 
 ## Repository overview
 ```
