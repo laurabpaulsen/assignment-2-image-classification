@@ -56,6 +56,8 @@ def main():
 
     # load data 
     (X_train, y_train), (X_test, y_test) = cifar10.load_data()
+
+    y_test, y_train = np.ravel(y_test), np.ravel(y_train)
     
     # define labels for the classes (used in for classification report)
     labels = ["airplane", "automobile", "bird", "cat", "deer", "dog", "frog", "horse", "ship", "truck"]
