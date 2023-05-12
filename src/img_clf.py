@@ -57,7 +57,7 @@ class ImageClassifier:
     def get_classifier(self):
         if self.model_type == "logistic":
             # default parameters for logistic regression
-            params = {"penalty": "none",
+            params = {"penalty": None,
                         "tol": 0.1,
                         "verbose": True,
                         "solver": "saga",
