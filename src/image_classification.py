@@ -26,7 +26,7 @@ def parse_args():
 
 def preprocess_image(img:np.ndarray):
     """
-    prepares an image for classification (converts to gray-scale, scales to values between 0 and 1, and reshapes to 1D array)
+    Prepares an image for classification (converts to gray-scale, scales to values between 0 and 1, and reshapes to 1D array)
 
     Parameters
     ----------
