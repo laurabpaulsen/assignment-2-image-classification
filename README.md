@@ -38,7 +38,7 @@ A classification report is saved in the `out` directory. The report contains the
 - F1-score
 - Support
 
-A logistic reggression classifier and a neural network classifier were trained and tested on the Cifar10 dataset.
+A logistic regression classifier and a neural network classifier were trained and tested on the Cifar10 dataset.
 
 The logistic regression classifier was trained specifying the following parameters:
 * No regularization
@@ -46,12 +46,44 @@ The logistic regression classifier was trained specifying the following paramete
 * The solver used was `saga`
 * The multi_class parameter was set to `multinomial`
 
+In the table below the classification report for the logistic regression classifier is shown.
+
+|     Class    | Precision |  Recall  | F1-Score | Support |
+|:------------:|:---------:|:--------:|:--------:|:-------:|
+|   airplane   |    0.34   |   0.38   |   0.36   |  1000   |
+| automobile  |    0.36   |   0.40   |   0.38   |  1000   |
+|     bird     |    0.26   |   0.20   |   0.23   |  1000   |
+|     cat      |    0.20   |   0.17   |   0.19   |  1000   |
+|     deer     |    0.26   |   0.17   |   0.21   |  1000   |
+|     dog      |    0.31   |   0.30   |   0.30   |  1000   |
+|     frog     |    0.27   |   0.32   |   0.30   |  1000   |
+|    horse     |    0.32   |   0.32   |   0.32   |  1000   |
+|     ship     |    0.32   |   0.43   |   0.37   |  1000   |
+|    truck     |    0.40   |   0.44   |   0.42   |  1000   |
+
+
 
 The neural network classifier was trained specifying the following parameters:
 * Two hidden layers with 64 and 10 nodes respectively
 * Learning_rate was set to be adaptive
 * A maximum of 50 iterations, but also allowing for early stopping
-
 See the `sci-kit learn` documentation for more information on the parameters used.
 
-As the data included 10 different classes, the chance level accuracy for each class is 10%. As seen in the classification reports in the `out` directory, it holds for all classes that the precision, recall and f1 score is higher for the neural network classifier as compared to the logistic classifier.
+In the table below the classification report for the neural network classifier is shown.
+
+|     Class    | Precision |  Recall  | F1-Score | Support |
+|:------------:|:---------:|:--------:|:--------:|:-------:|
+|   airplane   |    0.41   |   0.43   |   0.42   |  1000   |
+| automobile  |    0.49   |   0.43   |   0.46   |  1000   |
+|     bird     |    0.29   |   0.32   |   0.31   |  1000   |
+|     cat      |    0.25   |   0.20   |   0.22   |  1000   |
+|     deer     |    0.32   |   0.27   |   0.29   |  1000   |
+|     dog      |    0.44   |   0.30   |   0.36   |  1000   |
+|     frog     |    0.34   |   0.57   |   0.42   |  1000   |
+|    horse     |    0.44   |   0.48   |   0.46   |  1000   |
+|     ship     |    0.50   |   0.43   |   0.46   |  1000   |
+|    truck     |    0.47   |   0.47   |   0.47   |  1000   |
+
+
+
+As the data included 10 different classes, the chance level accuracy for each class is 10%. As seen in the classification reports, it holds for all classes that the precision, recall and f1 score is higher for the neural network classifier as compared to the logistic classifier.
